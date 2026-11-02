@@ -1,0 +1,109 @@
+========================================================================
+
+                  IPONTRACK - USER INSTRUCTIONS & GUIDE
+
+========================================================================
+
+
+
+Welcome to IponTrack! This lightweight daily budget & savings tracking app 
+
+is designed to help you manage your daily "baon", track expenses, and view 
+
+your weekly savings history across all your devices (PC, tablet, mobile).
+
+
+
+------------------------------------------------------------------------
+
+1. HOW TO LOG DAILY BUDGET & EXPENSES
+
+------------------------------------------------------------------------
+
+1. Select the target day of the week (Monday - Sunday) using the dropdown.
+
+2. Enter your total allowance/budget for that day in the 
+
+   "Day's Budget / Baon (₱)" field (e.g., 500).
+
+3. Enter what you spent on in the "Item Description" field 
+
+   (e.g., Jeepney fare, Lunch, Coffee).
+
+4. Enter the amount spent in the "Spent Amount (₱)" field (e.g., 150).
+
+5. Click "+ Save Entry".
+
+
+
+Note: 
+
+- You can add multiple expenses to the same day.
+
+- If you only want to set a starting budget for the day without an expense 
+
+  yet, leave the description and spent amount blank.
+
+
+
+------------------------------------------------------------------------
+
+2. VIEWING & NAVIGATING HISTORY
+
+------------------------------------------------------------------------
+
+- Use the top toolbar dropdowns to select the Month, Week Number (Week 1–5), 
+
+  and Year you want to view or edit.
+
+- The dashboard automatically displays:
+
+    * Total Weekly Budget: Combined baon/budget logged for that week.
+
+    * Total Spent: Total sum of expenses logged for that week.
+
+    * Total Money On Hand: Your remaining balance (Budget minus Spent).
+
+- Days will only show up in the history list once you log a budget or 
+
+  an expense for them to keep your dashboard clean.
+
+
+
+------------------------------------------------------------------------
+
+3. DELETING AN EXPENSE
+
+------------------------------------------------------------------------
+
+- To remove an item from your list, click the red trash icon next to the 
+
+  logged item amount in the breakdown section.
+
+- The dashboard totals will automatically recalculate.
+
+
+
+------------------------------------------------------------------------
+
+4. DATA SAVING & PRIVACY
+
+------------------------------------------------------------------------
+
+- Your data is stored locally on your device's web browser using LocalStorage.
+
+- No external server or login is required.
+
+- Data stays saved on your browser even if you refresh or close the tab.
+
+- To keep your data intact, avoid clearing your browser's site data/cookies 
+
+  for this site.
+
+
+
+========================================================================
+
+                      HAPPY SAVING WITH IPONTRACK!
+
+========================================================================

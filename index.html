@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tab Icon (Favicon) -->
+    <link rel="icon" type="image/png" href="logoimagepiggy.png">
+    
+    <title>IponTrack | Daily Expense & Savings Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header with Your New Logo -->
+        <header class="app-header">
+            <div class="logo">
+                <img src="logoniPiggy.png" alt="IponTrack Logo" class="brand-logo">
+            </div>
+            <p class="subtitle">Clean daily allowance & historical savings vault</p>
+        </header>
+
+        <!-- Week Selector Toolbar -->
+        <section class="glass-card week-picker-card">
+            <div class="picker-group">
+                <label for="month-select"><i class="fa-solid fa-calendar-days"></i> Month</label>
+                <select id="month-select">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+            </div>
+            <div class="picker-group">
+                <label for="week-select"><i class="fa-solid fa-layer-group"></i> Week</label>
+                <select id="week-select">
+                    <option value="1">Week 1</option>
+                    <option value="2">Week 2</option>
+                    <option value="3">Week 3</option>
+                    <option value="4">Week 4</option>
+                    <option value="5">Week 5</option>
+                </select>
+            </div>
+            <div class="picker-group">
+                <label for="year-select"><i class="fa-solid fa-clock"></i> Year</label>
+                <select id="year-select">
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
+            <div class="active-period-badge">
+                <span>Viewing:</span>
+                <strong id="active-period-label">Week 1 of November 2026</strong>
+            </div>
+        </section>
+
+        <!-- Dashboard Summary Cards -->
+        <section class="summary-grid">
+            <div class="glass-card summary-card">
+                <div class="icon-wrapper blue">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <div>
+                    <span class="card-label">Selected Week Budget</span>
+                    <h2 id="total-ipon">₱0.00</h2>
+                </div>
+            </div>
+            <div class="glass-card summary-card">
+                <div class="icon-wrapper rose">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <div>
+                    <span class="card-label">Total Spent</span>
+                    <h2 id="total-spent">₱0.00</h2>
+                </div>
+            </div>
+            <div class="glass-card summary-card">
+                <div class="icon-wrapper emerald">
+                    <i class="fa-solid fa-vault"></i>
+                </div>
+                <div>
+                    <span class="card-label">Total Money On Hand</span>
+                    <h2 id="total-remaining">₱0.00</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Daily Input Panel -->
+            <section class="glass-card input-section">
+                <h3><i class="fa-solid fa-pen-to-square"></i> Log Daily Expense</h3>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label for="day-select">Select Day</label>
+                        <select id="day-select" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="starting-amount">Day's Budget / Baon (₱)</label>
+                        <input type="number" id="starting-amount" step="0.01" placeholder="Add amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="expense-desc">Item Description</label>
+                        <input type="text" id="expense-desc" placeholder="e.g. Lunch, Transport, Snacks">
+                    </div>
+                    <div class="form-group">
+                        <label for="expense-amount">Spent Amount (₱)</label>
+                        <input type="number" id="expense-amount" step="0.01" placeholder="Add Spent Amount">
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fa-solid fa-plus"></i> Save Entry
+                    </button>
+                </form>
+            </section>
+
+            <!-- Days Overview & History -->
+            <section class="glass-card history-section">
+                <div class="history-header">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Week History Breakdown</h3>
+                </div>
+                <div id="days-container" class="days-container">
+                    <!-- Dynamically populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
